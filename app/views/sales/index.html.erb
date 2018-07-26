@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Registros Ingresados</h2>
+  <table class="table table-striped">
+      <thead>
+        <th>Cod</th>
+        <th>Detail</th>
+        <th>Category</th>
+        <th>Value</th>
+        <th>Discount</th>
+        <th>Total</th>
+      </thead>
+      <tbody>
+        <% @sales.each do |s| %>
+        <tr>
+          <td><p><%= s.cod %></p></td>
+          <td><p><%= s.detail %></p></td>
+          <td><p><%= s.category %></p></td>
+          <td><p><%= s.value %></p></td>
+          <td><p><%= s.discount %></p></td>
+        </tr>
+        <% end %>
+      </tbody>
+  </table>
+
+  <%= link_to 'Agregar Nuevo registro', sales_new_path, class:"btn btn-primary" %>
+</div>
